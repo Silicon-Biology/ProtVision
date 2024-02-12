@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtVision</title>
+<link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="content_body" >
+    <div class="header">
+        <h1>ProtVision</h1>
+    </div>
+   
+   
+    <div id="Instructions" >
+        <h3>THIS TOOL WILL GIVE YOU THE ALIPHATIC INDEX OF THE PROTEIN SEQUENCE YOU PROVIDED</h3> <br>
+    <h4> <u> NOTE</u>: <br> As you can see this tool can take inputs from the user in three different ways: 1. by giving the sequence directly as input, 2. by giving the Uniprot ID of the target sequence or 3. by giving a file which has the target sequence. <br>
+        There are certain rules to follow while using any of these methods. They are:
+        <ul>
+            <li> If you are entering the sequence directly please make sure that the greater than symbol <b> (>) </b> is present in the begining of the sequence. And there's no meta-information present. Also all the lettters in the sequence should be in Capital/Block letters. If the ">" is not present it will be considered as an Accession ID and searched for inn UniProt, resulting in an error.</li>
+            <li> If you are entering the accession ID please enter only the UNIPROT accesssion id. The accession id of other databases should not be used. </li>
+            <li> For file input, please make sure that the symbol ">" is not present in the beginning of the sequence and there's only one sequence in the file.</li>
+        </ul>
+    </h4>
+    </div>
+   <hr><hr><hr>
+   
+    <div class="analyser">
+    <h2>Input Sequence, UniProt ID, or Upload a File:</h2>
+    <textarea id="input" placeholder="Enter sequence or UniProt ID here..." rows="6" cols="50"></textarea>
+    <br>
+    <input type="file" id="fileInput" accept=".txt, .fasta">
+    <br>
+    <button id="analyze">Analyze</button>
+
+    <h2 id="out_disp" >The Output:</h2>
+
+    <textarea id="output" placeholder="Your result" rows="15" cols="65"></textarea>
+
+    <!-- <div id="output"></div> -->
+    </div>
+    <div class="foot" >
+        <p>This is a free to use tool. Use it until you are satisfied!</p>
+    </div>   
+</div> 
+
+<script src="./aliphatic.js"></script>
+</body>
+</html>
